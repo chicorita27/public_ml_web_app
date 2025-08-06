@@ -9,8 +9,8 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 # Loading the saved models
-diabetes_model = pickle.load(open('C:/Users/91701/Downloads/diabetes_trained_model.sav', 'rb'))
-heart_model = pickle.load(open('C:/Users/91701/Downloads/heart_diease_model.sav', 'rb'))
+diabetes_model = pickle.load(open('diabetes_trained_model.sav', 'rb'))
+heart_model = pickle.load(open('heart_diease_model.sav', 'rb'))
 
 # Sidebar navigation
 with st.sidebar:
@@ -111,3 +111,4 @@ if selected == 'Heart Disease Prediction':
             st.success(heart_diagnosis)
         except:
             st.error("Please enter valid numeric values for all fields.")
+
